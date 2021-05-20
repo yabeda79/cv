@@ -1,17 +1,32 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Paper from "@material-ui/core/Paper";
+import { makeStyles, styled } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import photo from "./img/cv_photo.jpg";
+import { Typography } from "@material-ui/core";
+import Switch from "@material-ui/core/Switch";
+
+//import components
+
+import About from "./components/About";
+import Exp from "./components/Exp";
+import Education from "./components/Education";
+import Skills from "./components/Skills";
+import Lang from "./components/Lang";
+
+/*
+things to add:
+1. theme swicher
+2. contact links (absolute position at the bottom side of photo with text like "hello im vladislav karol")
+
+questions:
+1. fonts awesome connection (or MUI icons)
+2. MUI theme 
+3. img positioning
+*/
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-  },
-  paper: {
-    padding: theme.spacing(2),
-    textAlign: "center",
-    color: theme.palette.text.secondary,
   },
   photo: {
     height: "100vh",
@@ -23,43 +38,26 @@ const useStyles = makeStyles((theme) => ({
     // justifyContent: "center",
     objectPosition: "center",
   },
-  block_header: {
-    fontSize: "24px",
-    color: "#bebece",
-    padding: "10px",
-  },
-  education_header: {
-    fontSize: "15px",
-    color: "#bebece",
-    paddingLeft: "10px",
-  },
-  main_text: {
-    fontSize: "15px",
-    color: "#3d3d50",
-    paddingLeft: "10px",
-  },
-  low_text: {
-    fontSize: "12px",
-    color: "#3d3d50",
-    paddingLeft: "10px",
-    marginBottom: "30px",
-  },
-  bold: {
-    fontWeight: "bold",
-  },
-  flex_container: {
-    display: "flex",
-    justifyContent: "space-around",
+  absolute: {
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
   },
 }));
 
+const StyledEmptyDiv = styled(Typography)({
+  height: "100px",
+});
+
 const App = () => {
-  const classes = useStyles();
+  const appClasses = useStyles();
+
   return (
-    <div className={classes.root}>
+    <div className={appClasses.root}>
       <Grid container spacing={3}>
         <Grid
-          className={classes.img_container}
+          className={appClasses.img_container}
           item
           xs={12}
           sm={12}
@@ -67,59 +65,20 @@ const App = () => {
           lg={6}
           xl={6}
         >
-          {/* <Paper className={classes.paper}>photo</Paper> */}
-          <img src={photo} alt="my_photo" className={classes.photo} />
+          <img src={photo} alt="my_photo" className={appClasses.photo} />
         </Grid>
         <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
-          <div>
-            <h1 className={classes.block_header}>About me</h1>
-            <p className={classes.main_text}>
-              I've got different passions, one of which is Web-development. I am
-              a hard working, honest individual. I am a good timekeeper, always
-              willing to learn new skills. I am friendly, helpful and polite,
-              have a good sense of humour. I am able to work independently in
-              busy environments and also within a team setting. I am outgoing
-              and tactful, and able to listen effectively when solving problems.
-            </p>
-          </div>
-          <div>
-            <h1 className={classes.block_header}>Work Experience</h1>
-            <h2 className={classes.education_header}>2019-2021</h2>
-            <p className={classes.main_text}>Junior construction engineer</p>
-            <p className={classes.main_text}>Monorakurs GC</p>
-            <p className={classes.low_text}>Minsk, Belarus</p>
-          </div>
-          <div>
-            <h1 className={classes.block_header}>Education</h1>
-            <h2 className={classes.education_header}>2016-2020</h2>
-            <p className={classes.main_text}>
-              Belarusian National Technical University
-            </p>
-            <p className={classes.low_text}>Minsk, Belarus</p>
-            <h2 className={classes.education_header}>2005-2016</h2>
-            <p className={classes.main_text}>Gymnasium №146</p>
-            <p className={classes.low_text}>Minsk, Belarus</p>
-          </div>
-          <div>
-            <h1 className={classes.block_header}>Skills</h1>
-            <div className={classes.flex_container}>
-              <p className={classes.main_text}>HTML5</p>
-              <p className={classes.main_text}>CSS3</p>
-              <p className={classes.main_text}>JavaScript</p>
-              <p className={classes.main_text}>React.js</p>
-              <p className={classes.main_text}>Material-UI</p>
-              <p className={classes.main_text}>Git</p>
-              <p className={classes.main_text}>Figma</p>
-            </div>
-          </div>
-          <div>
-            <h1 className={classes.block_header}>Languages</h1>
-            <div className={classes.flex_container}>
-              <p className={classes.main_text}>Russian (Native speaker)</p>
-              <p className={classes.main_text}>Belarussian (Native speaker)</p>
-              <p className={classes.main_text}>English (Intermediate)</p>
-            </div>
-          </div>
+          <Switch />
+          <About />
+          <StyledEmptyDiv />
+          <Exp />
+          <StyledEmptyDiv />
+          <Education />
+          <StyledEmptyDiv />
+          <Skills />
+          <StyledEmptyDiv />
+          <Lang />
+          <StyledEmptyDiv />
         </Grid>
       </Grid>
     </div>
