@@ -38,11 +38,18 @@ const useStyles = makeStyles((theme) => ({
     // justifyContent: "center",
     objectPosition: "center",
   },
-  absolute: {
-    position: "absolute",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
+  // absolute: {
+  //   position: "absolute",
+  //   top: "50%",
+  //   left: "50%",
+  //   transform: "translate(-50%, -50%)",
+  // },
+  fixed: {
+    position: "fixed",
+    top: "0",
+    left: "0",
+    width: "50vw",
+    height: "auto",
   },
 }));
 
@@ -55,6 +62,11 @@ const App = () => {
 
   return (
     <div className={appClasses.root}>
+      <img
+        src={photo}
+        alt="my_photo"
+        className={(appClasses.photo, appClasses.fixed)}
+      />
       <Grid container spacing={3}>
         <Grid
           className={appClasses.img_container}
@@ -64,9 +76,7 @@ const App = () => {
           md={6}
           lg={6}
           xl={6}
-        >
-          <img src={photo} alt="my_photo" className={appClasses.photo} />
-        </Grid>
+        ></Grid>
         <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
           <Switch />
           <About />
