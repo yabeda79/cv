@@ -38,7 +38,16 @@ const Skills = () => {
           React.js
         </StyledParagraphMain>
         <StyledParagraphMain item xs={6} sm={6} md={3} lg={3} xl={3}>
+          Redux.js
+        </StyledParagraphMain>
+        <StyledParagraphMain item xs={6} sm={6} md={3} lg={3} xl={3}>
           Material-UI
+        </StyledParagraphMain>
+        <StyledParagraphMain item xs={6} sm={6} md={3} lg={3} xl={3}>
+          Styled-components
+        </StyledParagraphMain>
+        <StyledParagraphMain item xs={6} sm={6} md={3} lg={3} xl={3}>
+          Bootstrap
         </StyledParagraphMain>
         <StyledParagraphMain item xs={6} sm={6} md={3} lg={3} xl={3}>
           Git
