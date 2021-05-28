@@ -77,6 +77,13 @@ const StyledEmptyDiv = styled(Typography)({
   height: "50px",
 });
 
+const StyledGradContainerDiv = styled(Container)({
+  height: "100vh",
+  position: "absolute",
+  left: "0%",
+  bottom: "0%",
+});
+
 const StyledHelloBold = styled(Typography)({
   fontWeight: "bold",
   color: "#bebece",
@@ -166,7 +173,9 @@ const App = () => {
             <StyledTranspDiv
               className={vw < 960 ? appClasses.smallvw : appClasses.largevw}
             >
-              <StyledGradientDiv></StyledGradientDiv>
+              <StyledGradContainerDiv>
+                <StyledGradientDiv></StyledGradientDiv>
+              </StyledGradContainerDiv>
               <StyledHelloDiv>
                 <StyledHelloBold
                   className={
