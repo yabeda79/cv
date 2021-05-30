@@ -119,8 +119,7 @@ const StyledGradientDiv = styled("div")({
   height: "50%",
   position: "absolute",
   left: "0",
-  // bottom: "0",
-  top: "50vh",
+  bottom: "0",
   background:
     "linear-gradient(0deg, rgba(34,54,195,1) 0%, rgba(255,255,255,0) 100%)",
 });
