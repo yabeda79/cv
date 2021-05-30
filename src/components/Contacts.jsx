@@ -38,7 +38,7 @@ const Contacts = () => {
         </Grid>
         <Grid item xs={6} sm={6} md={6} lg={6} xl={6}>
           <StyledConHeader>Email:</StyledConHeader>
-          <StyledParagraphMain>+375 29 550-23-81</StyledParagraphMain>
+          <StyledParagraphMain>vlad230899@gmail.com</StyledParagraphMain>
         </Grid>
       </Grid>
     </div>
