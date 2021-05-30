@@ -29,7 +29,8 @@ const useStyles = makeStyles((theme) => ({
   },
   photo: {
     height: "100vh",
-    width: "auto",
+    width: "100vw",
+    objectFit: "cover",
   },
   img_container: {
     overflow: "hidden",
@@ -69,6 +70,9 @@ const useStyles = makeStyles((theme) => ({
   },
   desktop_font_size_me: {
     fontSize: "32px",
+  },
+  relative: {
+    position: "relative",
   },
 }));
 
@@ -147,7 +151,9 @@ const App = () => {
           <div className={vw < 960 ? "" : appClasses.img_fixed}>
             <img src={photo} alt="my_photo" className={appClasses.photo} />
             <StyledTranspDiv
-              className={vw < 960 ? appClasses.smallvw : appClasses.largevw}
+              className={
+                (appClasses.relative, vw < 960 ? "" : appClasses.largevw)
+              }
             >
               <StyledGradientDiv></StyledGradientDiv>
               <StyledHelloDiv>
