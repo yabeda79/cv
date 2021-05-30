@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   photo: {
-    height: "100vh",
+    height: "96vh",
     width: "100vw",
     objectFit: "cover",
   },
@@ -91,7 +91,7 @@ const StyledTranspDiv = styled(Container)({
   position: "absolute",
   left: "0",
   bottom: "0",
-  height: "100vh",
+  height: "96vh",
 });
 
 const StyledIconsDiv = styled("div")({
