@@ -148,13 +148,11 @@ const App = () => {
           lg={6}
           xl={6}
         >
-          <div className={vw < 960 ? "" : appClasses.img_fixed}>
+          <div
+            className={vw < 960 ? appClasses.relative : appClasses.img_fixed}
+          >
             <img src={photo} alt="my_photo" className={appClasses.photo} />
-            <StyledTranspDiv
-              className={
-                (appClasses.relative, vw < 960 ? "" : appClasses.largevw)
-              }
-            >
+            <StyledTranspDiv className={vw < 960 ? "" : appClasses.largevw}>
               <StyledGradientDiv></StyledGradientDiv>
               <StyledHelloDiv>
                 <StyledHelloBold
