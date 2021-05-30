@@ -12,7 +12,6 @@ import Container from "@material-ui/core/Container";
 
 import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
-// import EmailIcon from "@material-ui/icons/Email";
 import TelegramIcon from "@material-ui/icons/Telegram";
 
 //import components
@@ -77,26 +76,12 @@ const StyledEmptyDiv = styled(Typography)({
   height: "50px",
 });
 
-// const StyledGradContainerDiv = styled(Container)({
-//   height: "100vh",
-//   position: "absolute",
-//   left: "0%",
-//   bottom: "0%",
-// });
-
 const StyledHelloBold = styled(Typography)({
   fontWeight: "bold",
   color: "#bebece",
   textAlign: "center",
   justifySelf: "center",
 });
-
-// const StyledMeBold = styled(Typography)({
-//   fontWeight: "bold",
-//   color: "#bebece",
-//   textAlign: "center",
-//   justifySelf: "center",
-// });
 
 const StyledTranspDiv = styled(Container)({
   position: "absolute",
@@ -125,22 +110,13 @@ const StyledHelloDiv = styled("div")({
   justifyContent: "center",
 });
 
-// const StyledMeDiv = styled("div")({
-//   width: "80%",
-//   position: "absolute",
-//   left: "50%",
-//   bottom: "11%",
-//   transform: "translate(-50%, -50%)",
-//   display: "flex",
-//   justifyContent: "center",
-// });
-
 const StyledGradientDiv = styled("div")({
   width: "100%",
   height: "50%",
   position: "absolute",
-  left: "0%",
-  bottom: "0%",
+  left: "0",
+  // bottom: "0",
+  top: "50vh",
   background:
     "linear-gradient(0deg, rgba(34,54,195,1) 0%, rgba(255,255,255,0) 100%)",
 });
@@ -185,17 +161,6 @@ const App = () => {
                   Hi, I'm Vladislav Karol
                 </StyledHelloBold>
               </StyledHelloDiv>
-              {/* <StyledMeDiv>
-                <StyledMeBold
-                  className={
-                    vw < 960
-                      ? appClasses.mobile_font_size_me
-                      : appClasses.desktop_font_size_me
-                  }
-                >
-                  A beginner front-end developer
-                </StyledMeBold>
-              </StyledMeDiv> */}
               <StyledIconsDiv>
                 <a
                   href="http://github.com/yabeda79/"
@@ -211,9 +176,6 @@ const App = () => {
                 >
                   <LinkedInIcon fontSize="large" style={{ color: "#bebece" }} />
                 </a>
-                {/* <a href="http://t.me/vladislavkarol" target="_blank">
-                  <EmailIcon fontSize="large" style={{ color: "#bebece" }} />
-                </a> */}
                 <a
                   href="http://t.me/vladislavkarol"
                   target="_blank"
